@@ -1,0 +1,330 @@
+/* Reset Básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #7b2cbf;
+  --bg-color: #ffffff; /* Invertido: de preto para branco */
+  --card-bg: #f8f8f8; /* Invertido: de cinza escuro para cinza muito claro */
+  --text-main: #0a0a0a; /* Invertido: texto agora é escuro */
+  --text-white: #ffffff;
+  --transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+/* Barra Superior */
+.top-bar {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Header */
+header {
+  padding: 20px 5%;
+  background-color: rgba(255, 255, 255, 0.98); /* Invertido para branco */
+  border-bottom: 1px solid #eee; /* Borda clara */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.logo img {
+  height: 50px;
+  filter: brightness(0); /* Ajustado para aparecer no fundo branco */
+  transition: var(--transition);
+}
+
+.search-bar {
+  flex-grow: 1;
+  max-width: 500px;
+  position: relative;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 12px 25px;
+  border-radius: 50px;
+  border: 1px solid #ddd;
+  background: #f1f1f1; /* Fundo do input claro */
+  color: #333;
+  outline: none;
+}
+
+.search-bar button {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.user-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.account {
+  font-size: 12px;
+}
+.account strong {
+  color: var(--primary-color);
+}
+
+.admin-badge {
+  background: #eee;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  text-decoration: none;
+  border: 1px solid #ddd;
+  transition: var(--transition);
+}
+
+.admin-badge:hover {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  color: white;
+}
+
+.cart {
+  position: relative;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.cart-count {
+  background: var(--primary-color);
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: white;
+  position: absolute;
+  top: -5px;
+  right: -10px;
+}
+
+/* Menu */
+.nav-menu ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin-top: 20px;
+  gap: 30px;
+}
+
+.nav-menu a {
+  color: #555; /* Texto do menu mais escuro para ler no branco */
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+}
+
+/* Marcas - INVERTIDO PARA PRETO */
+.brands-section {
+  background: #0a0a0a; /* Invertido: agora as marcas ficam no fundo preto */
+  padding: 25px 0;
+}
+.brands-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.brand-item img {
+  width: 80px;
+  filter: grayscale(1) invert(1); /* Invertido para aparecer no fundo preto */
+  opacity: 0.7;
+  transition: 0.3s;
+}
+.brand-item img:hover {
+  filter: grayscale(0) invert(0);
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* Hero */
+.hero-banner {
+  /* Gradiente ajustado para não ficar pesado no modo claro */
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.9), transparent),
+    url("https://postersbase.com/cdn/shop/articles/kanye-west_6a1e735a-5683-4da6-ae1d-2562f2c25af6.png?v=1716304046");
+  background-size: cover;
+  background-position: center;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  padding: 0 10%;
+}
+
+.hero-content h1 {
+  font-size: 80px;
+  color: var(--primary-color);
+  text-shadow: 2px 2px 0px #000; /* Shadow invertida para contraste */
+}
+
+.hero-btn {
+  margin-top: 20px;
+  padding: 12px 30px;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* VITRINE E PRODUTOS (ALINHAMENTO) */
+.grid-produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 30px;
+  padding: 60px 10%;
+  background-color: var(--bg-color);
+}
+
+.produto-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #eee; /* Borda suave */
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.produto-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--primary-color);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Container da Imagem */
+.produto-imagem {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.produto-imagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s ease;
+}
+
+.produto-card:hover .produto-imagem img {
+  transform: scale(1.1);
+}
+
+.produto-info {
+  padding: 20px;
+  text-align: center;
+}
+
+.produto-info h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #222;
+  min-height: 48px;
+}
+
+.preco {
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.btn-comprar {
+  width: 100%;
+  padding: 10px;
+  background: var(
+    --primary-color
+  ); /* No modo claro, o botão preenchido fica melhor */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-comprar:hover {
+  background: #5a189a;
+}
+
+/* Footer - INVERTIDO PARA BRANCO */
+.rodape {
+  padding: 40px 10%;
+  border-top: 1px solid #eee;
+  background: #ffffff;
+}
+.rodape-conteudo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-info p {
+  color: #666;
+}
+.link-admin {
+  color: #999;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .header-main {
+    flex-direction: column;
+  }
+  .hero-content h1 {
+    font-size: 50px;
+  }
+  .grid-produtos {
+    padding: 40px 5%;
+  }
+}

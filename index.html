@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minha Loja - Estilo Streetwear</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  </head>
+  <body>
+    <div class="top-bar">FRETE GRÁTIS PARA TODO BRASIL!</div>
+
+    <header>
+      <div class="header-main">
+        <div class="logo">
+          <img
+            src="https://i.pinimg.com/236x/ca/6b/e8/ca6be8adef2959ae327404858cc84b86.jpg"
+            alt="Logo"
+          />
+        </div>
+
+        <div class="search-bar">
+          <input type="text" placeholder="O que você está buscando?" />
+          <button type="submit">🔍</button>
+        </div>
+
+        <div class="user-actions">
+          <div class="account">
+            <span
+              >Olá! <strong>Faça login</strong><br /><small
+                >Ou cadastre-se</small
+              ></span
+            >
+          </div>
+
+          <a href="admin.html" class="admin-badge" title="Painel do Lojista">
+            <span class="icon">⚙️</span>
+          </a>
+
+          <div class="cart">🛒 <span class="cart-count">0</span></div>
+        </div>
+      </div>
+
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="index.html" class="active">INÍCIO</a></li>
+          <li><a href="#">TÊNIS</a></li>
+          <li><a href="#">ROUPAS</a></li>
+          <li><a href="#">BONÉS</a></li>
+          <li><a href="#">QUEM SOMOS</a></li>
+          <li><a href="#">CONTATO</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="brands-section">
+        <div class="brands-container">
+          <div class="brand-item">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Logo_NIKE.svg/1280px-Logo_NIKE.svg.png"
+              alt="Nike"
+            />
+          </div>
+          <div class="brand-item">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/2/24/Adidas_logo.png"
+              alt="Adidas"
+            />
+          </div>
+          <div class="brand-item">
+            <img
+              src="https://logos-world.net/wp-content/uploads/2020/04/Puma-Logo.png"
+              alt="Puma"
+            />
+          </div>
+          <div class="brand-item">
+            <img
+              src="https://www.nicepng.com/png/full/90-907036_polo-ralph-lauren-logo-vector-polo-logo.png"
+              alt="Polo"
+            />
+          </div>
+          <div class="brand-item">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Louis_Vuitton_logo_and_wordmark.svg/250px-Louis_Vuitton_logo_and_wordmark.svg.png"
+              alt="LV"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="hero-banner">
+        <div class="hero-content">
+          <h2>LOJA Nº1 DO</h2>
+          <h1>BRASIL</h1>
+          <button class="hero-btn">CONFIRA AS NOVIDADES</button>
+        </div>
+      </section>
+
+      <div id="vitrine" class="grid-produtos">
+        <div class="produto-card">
+          <div class="produto-imagem">
+            <img
+              src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=600"
+              alt="Tênis"
+            />
+          </div>
+          <div class="produto-info">
+            <h3>Nike Air Max Red</h3>
+            <p class="preco">R$ 899,90</p>
+            <button class="btn-comprar">Ver Detalhes</button>
+          </div>
+        </div>
+
+        <div class="produto-card">
+          <div class="produto-imagem">
+            <img
+              src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?q=80&w=600"
+              alt="Tênis Jordan"
+            />
+          </div>
+          <div class="produto-info">
+            <h3>Jordan Retro High</h3>
+            <p class="preco">R$ 1.299,00</p>
+            <button class="btn-comprar">Ver Detalhes</button>
+          </div>
+        </div>
+
+        <div class="produto-card">
+          <div class="produto-imagem">
+            <img
+              src="https://images.unsplash.com/photo-1511746015097-97af00ba6273?q=80&w=600"
+              alt="Jaqueta Adidas"
+            />
+          </div>
+          <div class="produto-info">
+            <h3>Jaqueta Firebird Adidas</h3>
+            <p class="preco">R$ 450,00</p>
+            <button class="btn-comprar">Ver Detalhes</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="rodape">
+      <div class="rodape-conteudo">
+        <div class="footer-info">
+          <p>
+            &copy; 2026 Minha Loja Streetwear. Todos os direitos reservados.
+          </p>
+        </div>
+        <a href="admin.html" class="link-admin">Área do Lojista 🔐</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,152 @@
+/* Configurações para a tela de Login */
+.login-body {
+  background-color: #f4f7f6; /* Fundo cinza bem claro para destacar o card */
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.login-wrapper {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+}
+
+.login-container {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.admin-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.login-header h2 {
+  color: #1a1a1a;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.login-header p {
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+/* Grupos de Input */
+.input-group {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 8px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: #fdfdfd;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.input-group input:focus {
+  border-color: #7b2cbf;
+  box-shadow: 0 0 0 3px rgba(123, 44, 191, 0.1);
+}
+
+/* Wrapper da Senha com Olho */
+.senha-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+#btn-olho {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+#btn-olho:hover {
+  opacity: 1;
+}
+
+/* Botão de Entrar */
+#btn-entrar {
+  width: 100%;
+  padding: 14px;
+  background-color: #7b2cbf;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin-top: 10px;
+}
+
+#btn-entrar:hover {
+  background-color: #5a189a;
+}
+
+#btn-entrar:active {
+  transform: scale(0.98);
+}
+
+/* Mensagens de erro/sucesso */
+#mensagem {
+  margin-top: 20px;
+  font-size: 13px;
+  min-height: 20px;
+}
+
+.error {
+  color: #e63946;
+}
+.success {
+  color: #2a9d8f;
+}
+
+/* Footer do Login */
+.login-footer {
+  margin-top: 30px;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+
+.login-footer a {
+  color: #777;
+  text-decoration: none;
+  font-size: 13px;
+  transition: color 0.3s;
+}
+
+.login-footer a:hover {
+  color: #7b2cbf;
+}
